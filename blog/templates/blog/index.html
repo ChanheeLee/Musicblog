@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Music Blog</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<link rel="shortcut icon" href="static_files/icon.png">
+	</head>
+
+	<body align="center">	
+		<div class="menu" style="align:center;width:100%;height:80px;background-color:rgb(218,227,243)">
+			<a href=""><img src="static_files/icon.png" style="height:60px;padding-top:10px"></a>
+		</div>
+		<img src="static_files/pic2.png" width=100%>
+
+		<p class="groove" style="align:center;font-size:30px;border-top-style:groove;border-bottom-style:groove;width:40%">Today's Music</p>		
+		{% for post in posts %}
+		<p>
+		<iframe width="854" height="480" src="{{post.tag}}" frameborder="0" allowfullscreen></iframe>
+
+		</p>
+		<!--<p>{{post.lyrics}}<p>-->
+		{% endfor %}
+	</body>
+
+
+</html>
