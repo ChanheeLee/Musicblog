@@ -8,20 +8,28 @@
 		<link rel="shortcut icon" href="static_files/icon.png">
 	</head>
 
-	<body align="center">	
+	<body align="center" style="background-color:rgb(225,236,237)">	
 		<div class="menu" style="align:center;width:100%;height:80px;background-color:rgb(218,227,243)">
 			<a href=""><img src="static_files/icon.png" style="height:60px;padding-top:10px"></a>
 		</div>
 		<img src="static_files/pic2.png" width=100%>
+	
 
-		<p class="groove" style="align:center;font-size:30px;border-top-style:groove;border-bottom-style:groove;width:40%">Today's Music</p>		
+		<div class="pic" align="center" style="width:100%;height:160px;padding-top:40px;">
+		<p class="groove" style="text-align:center;font-size:50px;border-top-style:groove;border-bottom-style:groove;width:60%">Today's Music</p></div>		
 		{% for post in posts %}
 		<p>
 		<iframe width="854" height="480" src="{{post.tag}}" frameborder="0" allowfullscreen></iframe>
-
+		<br><br>
 		</p>
+		
 		<!--<p>{{post.lyrics}}<p>-->
 		{% endfor %}
+
+		 <div class="foot" style="text-align:center;width:100%;height:100px;background-color:rgb(221,221,221)">				
+			<a href="https://www.facebook.com/profile.php?id=100005739226740"><img src="http://www.underconsideration.com/brandnew/archives/facebook_2015_logo_detail.png" width=200px align="center" style="padding-top:10px;"></a>
+			
+		 </div>
 	</body>
 
 
