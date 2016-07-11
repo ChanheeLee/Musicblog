@@ -17,15 +17,29 @@
 
 		<div class="pic" align="center" style="width:100%;height:160px;padding-top:40px;">
 		<p class="groove" style="text-align:center;font-size:50px;border-top-style:groove;border-bottom-style:groove;width:60%">Today's Music</p></div>		
-		{% for post in posts %}
+		
 		<p>
-		<iframe width="854" height="480" src="{{post.tag}}" frameborder="0" allowfullscreen></iframe>
+		<iframe width="854" height="480" src="{{post1.tag}}" frameborder="0" allowfullscreen></iframe>
 		<br><br>
 		</p>
-		
+		<a href="/list" style="font-size:30px">Last Music List</a>
+		<br><br>				
 		<!--<p>{{post.lyrics}}<p>-->
-		{% endfor %}
-
+		
+		<!--		
+		<form method="post" action="">
+			message:<input type="text" name="message">
+			Name:<input type="text" name="Name">
+			<input type="submit" value="submit">
+		</form>-->
+		<h1>Visitor Board</h1>
+		<ul>
+		{% for w in words %}
+			<tr style="width:100%;text-align:center">
+				<td style="width:50%;font-size:30px;text-align:center">{{w.words}}</td> <td style="width:20%;font-size:30px;text-align:center">{{w.writer_name}}</td>  <td style="width:30%;font-size:30px;text-align:center">{{w.created_date}}</td>
+			</tr>	
+		{% endfor %}		
+		</ul>
 		 <div class="foot" style="text-align:center;width:100%;height:100px;background-color:rgb(221,221,221)">				
 			<a href="https://www.facebook.com/profile.php?id=100005739226740"><img src="http://www.underconsideration.com/brandnew/archives/facebook_2015_logo_detail.png" width=200px align="center" style="padding-top:10px;"></a>
 			

@@ -15,3 +15,11 @@ class Post(models.Model):
 		return self.lyrics
 
 
+
+class Word(models.Model):
+	wirter = models.ForeignKey('auth.User')
+	writer_name = models.TextField(max_length=20)
+	words = models.TextField(max_length=100)
+	created_date = models.DateTimeField(default=timezone.now)
+
+
